@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/includeHTML.js"></script>
+    <script src="/js/summary.js"></script>
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/summaryStyle.css">
+    <link rel="stylesheet" href="/css/sidbarStyle.css">
+    <link rel="stylesheet" href="/css/generalStyle.css">
+    <link rel="stylesheet" href="/css/headerStyle.css">
+</head>
+<body onload="includeHTML()">
+    <div w3-include-html="templates/sidebarTemplate.html"></div>
+    <div w3-include-html="templates/headerTemplate.html"></div>
+    <div class="summary">
+        <div class="firstRow">
+            <h1 class="summaryHeadline">Summary</h1>
+            <div style="font-size: 20px">Everything in a nutshell!</div>
+        </div>
+        <div class="summaryContainerLeft">
+            <div class="secondRow">
+                <div>
+                    <h2>5</h2>
+                    <div>Tasks in Board</div>
+                </div>
+                <div>
+                    <h2>2</h2>
+                    <div>Tasks in Progress</div>
+                </div>
+                <div>
+                    <h2>2</h2>
+                    <div>Awaiting Feedback</div>
+                </div>
+            </div>
+            <div class="thirdRow">
+                <div>
+                    <div>
+                        <img src="/img/urgentIcon.svg" alt="">
+                        <div>
+                            <h3>1</h3>
+                            <div>Urgent</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>October 16,2022</div>
+                        <div>Upcoming Deadline</div>
+                    </div>
+                </div>
+            </div>
+            <div class="fourthRow">
+                <div>
+                    <img src="/img/editIcon.svg" alt="">
+                    <div>
+                        <h3>1</h3>
+                        <div>To-do</div>
+                    </div>
+                </div>
+                <div>
+                    <img src="/img/doneIcon.svg" alt="">
+                    <div>
+                        <h3>1</h3>
+                        <div>Done</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="summaryContainerRight">
+            Good morning, Sofia Müller
+        </div>
+    </div>
+</body>
+</html>

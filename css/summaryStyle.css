@@ -1,0 +1,27 @@
+.summary {
+    padding-left: 370px;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.firstRow {
+    display: flex;
+    height: 50px;
+    padding-top: 50px;
+    width: 480px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summaryHeadline {
+    width: 225px;
+    border-right: 2px solid #29ABE2;
+    font-size: 42px;
+}
+
+h1 {
+    font-size: 55px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

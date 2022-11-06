@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/includeHTML.js"></script>
+    <script src="/js/addTask.js"></script>
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/addTaskStyle.css">
+    <link rel="stylesheet" href="/css/sidbarStyle.css">
+    <link rel="stylesheet" href="/css/generalStyle.css">
+    <link rel="stylesheet" href="/css/headerStyle.css">
+</head>
+
+<body onload="includeHTML()">
+    <div w3-include-html="templates/sidebarTemplate.html"></div>
+    <div w3-include-html="templates/headerTemplate.html"></div>
+    <div class="addTask">
+        <h1>Add Task</h1>
+        <div class="taskContainer">
+            <div class="taskContainerLeft">
+                <div class="taskContainerSections">
+                    <p>Title</p>
+                    <input class="inputField" type="text">
+                </div>
+                <div class="taskContainerSections">
+                    <p>Description</p>
+                    <textarea class="textarea inputField" name="Description" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="taskContainerSections">
+                    <p>Category</p>
+                    <div onclick="showCategorys()" id="categoryDropdown" class="dropdown">
+                        <div class="dorpdownRow">Select task category <img src="/img/downIcon.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="taskContainerSections">
+                    <p>Assignet to</p>
+                    <div onclick="showContacts()" id="contactsDropdown" class="dropdown">
+                        <div class="dorpdownRow">Select task category <img src="/img/downIcon.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="taskContainerRight">
+                <div class="taskContainerSections">
+                    <p>Due date</p>
+                    <input class="inputField" type="date">
+                </div>
+                <div class="taskContainerSections">
+                    <p>Prio</p>
+                    <div class="selectWidth prio">
+                        <div class="prioBtn">Urgent <img class="prioIcon" src="img/highIcon.svg" alt=""></div>
+                        <div class="prioBtn">Medium <img class="prioIcon" src="img/mediumIcon.svg" alt=""></div>
+                        <div class="prioBtn">Low <img class="prioIcon" src="img/lowIcon.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="taskContainerSections">
+                    <p>Subtasks</p>
+                    <div onclick="showTasks()" id="taskDropdown" class="dropdown">
+                        <div class="dorpdownRow">Add Subtask<img src="/img/downIcon.svg" alt=""></div>
+                    </div>
+                    <div id="subtasks"></div>
+                </div>
+            </div>
+        </div>
+        <div class="taskBottomRow">
+            <div class="taskBottomBtn">
+                <div id="clearBtn">Clear <img class="taskBtnIcon" src="img/cancel.svg" alt=""></div>
+                <div id="createTaskBtn">Create Task <img class="taskBtnIcon" src="img/check.svg" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileBar"></div>
+</body>
+
+</html>
