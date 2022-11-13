@@ -28,7 +28,7 @@ h1 {
     border: none;
     font-size: 16px;
     width: 150px;
-    background-color: #F6F7F8;
+    background-color: #FFFFFF;
 }
 
 .searchTask {
@@ -38,6 +38,7 @@ h1 {
     padding: 8px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 10%);
+    background-color: #FFFFFF;
 }
 
 textarea:focus,
@@ -64,7 +65,7 @@ input:focus {
 }
 
 .categorys {
-    width: 20%;
+    width: 250px;
 }
 
 .categorysRow {
@@ -74,7 +75,7 @@ input:focus {
 }
 
 .task {
-    min-height: 200px;
+    min-height: 250px;
     margin-top: 9%;
     background-color: black;
     border-radius: 10px;

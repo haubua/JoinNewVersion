@@ -3,6 +3,7 @@
     padding-right: 10%;
     height: 85vh;
     padding-top: 50px;
+    font-size: 21px;
 }
 
 h1 {
@@ -36,11 +37,12 @@ h1 {
     display: flex;
     justify-content: end;
     width: 86%;
+    margin-top: 45%;
 }
 
 .taskBottomBtn {
     display: flex;
-    width: 300px;
+    width: 338px;
     justify-content: space-between;
 }
 
@@ -48,10 +50,12 @@ h1 {
     display: flex;
     align-items: center;
     padding: 11px;
-    width: 90px;
+    width: 114px;
     justify-content: space-between;
     border: 1px solid #2A3647;
     border-radius: 10px;
+    cursor: pointer;
+    font-size: 21px;
 }
 
 #createTaskBtn {
@@ -60,9 +64,11 @@ h1 {
     align-items: center;
     color: #FFFFFF;
     padding: 11px;
-    width: 120px;
+    width: 162px;
     justify-content: space-between;
     border-radius: 10px;
+    cursor: pointer;
+    font-size: 21px;
 }
 
 .taskBtnIcon {
@@ -89,7 +95,7 @@ p {
 }
 
 .selectWidth {
-    width: 414px;
+    width: 414px !important;
 }
 
 textarea:focus,
@@ -120,6 +126,8 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 .prioIcon {
@@ -128,16 +136,60 @@ input:focus {
     margin-left: 10px;
 }
 
+.prioIconFilter {
+    filter: brightness(0) invert(1);
+}
+
+.prioUrgent {
+    background-color: #FF551F;
+    color: white;
+}
+
+.prioMedium {
+    background-color: #FFA800;
+    color: white;
+}
+
+.prioLow {
+    background-color: #7AE229;
+    color: white;
+}
+
 .dropdown {
     background-color: #FFFFFF;
     border: 1px solid rgb(0, 0, 0, 0.3);
-    padding: 11px;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 10%);
     width: 390px;
+    cursor: pointer;
 }
 
 .dorpdownRow {
     display: flex;
     justify-content: space-between;
+}
+
+.categoryPadding {
+    padding: 11px;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+}
+
+.category:hover {
+    background-color: #E7E7E7;
+}
+
+.catColor {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+
+.dropdownContainer {
+    max-height: 200px;
+    overflow: auto;
 }

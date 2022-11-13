@@ -4,15 +4,17 @@
     display: flex;
 }
 
-.contactsContainerLeft {
-    width: 350px;
+#contactsContainerLeft {
+    width: 367px;
     height: 100%;
     background-color: #FFFFFF;
-    overflow-y: hidden;
+    overflow-y:scroll;
     border-right: 1px solid rgb(0, 0, 0, 0.3);
-    padding-right: 2%;
-    padding-left: 2%;
+    padding-right: 50px;
+    padding-left: 50px;
     box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
 }
 
 .contactsContainerRight {
@@ -59,4 +61,50 @@
     justify-content: end;
     margin-right: 15%;
     cursor: pointer;
+}
+
+.contactsCharacter {
+    font-size: 21px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #D1D1D1;
+    padding-left: 25px;
+    margin-bottom: 12.5px;
+}
+
+.contactsRow {
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+    display: flex;
+    align-items: center;
+    padding-left: 13px;
+}
+
+
+.initials {
+   
+    margin-right: 25px;
+    
+    
+    
+}
+
+.circleBg {
+    font-size: 16px;
+    color: white;
+    height: 32px;
+    width: 32px;
+    padding: 10px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactName {
+    font-size: 21px;
+}
+
+.email {
+color: #007CEE
 }
