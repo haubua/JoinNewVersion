@@ -4,22 +4,34 @@
     display: flex;
 }
 
-#contactsContainerLeft {
+#contactsContainerLeft {}
+
+.contactsContainerLeft {
     width: 367px;
     height: 100%;
     background-color: #FFFFFF;
-    overflow-y:scroll;
+    overflow-y: scroll;
     border-right: 1px solid rgb(0, 0, 0, 0.3);
     padding-right: 50px;
     padding-left: 50px;
     box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 10%);
     display: flex;
     flex-direction: column;
+    border-right: none;
 }
+
+.mobileLeftAddContactBtn {
+    justify-content: flex-end;
+    display: flex;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
 
 .contactsContainerRight {
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 65px;
+    margin-right: 65px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -32,6 +44,10 @@
     align-items: center;
     justify-content: space-between;
     width: 420px;
+}
+
+#contactDetails {
+    margin-bottom: 65px;
 }
 
 .contactsHeadline {
@@ -73,20 +89,19 @@
 }
 
 .contactsRow {
-    margin-top: 12.5px;
-    margin-bottom: 12.5px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    padding-left: 13px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    border-radius: 10px;
+    
 }
 
 
-.initials {
-   
+.initial {
     margin-right: 25px;
-    
-    
-    
 }
 
 .circleBg {
@@ -99,6 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid #FFFFFF;
 }
 
 .contactName {
@@ -106,5 +122,801 @@
 }
 
 .email {
-color: #007CEE
+    color: #007CEE;
+    word-break: break-word;
 }
+
+.detailsInitial {
+    min-height: 120px;
+    min-width: 120px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 47px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.popupInitial {
+    min-height: 120px;
+    min-width: 120px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 47px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+.detailsFirstRow {
+    display: flex;
+
+}
+
+.detailsName {
+    font-size: 47px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.detailsSecondRow {
+    margin-top: 60px;
+    display: flex;
+    width: 380px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pencilImg {
+    height: 23px;
+    margin-right: 10px;
+}
+
+.editContactRow {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.detailsThirdRow {
+    margin-top: 60px;
+}
+
+.emailDetails {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.detailsFourthRow {
+    margin-top: 35px;
+}
+
+.phoneDetails {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.selectedContact {
+    background-color: #2A3647;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 22px;
+    border-radius: 10px;
+}
+
+.contactsRow:hover {
+    background-color: #eef0f1;
+}
+
+
+.popup {
+    width: 1000px;
+    height: 450px;
+    display: flex;
+    animation: fadeIn 1s ease 0s 1 normal forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.editD-none {
+    animation: fadeOut 1s ease 0s 1 normal backwards !important;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#cover {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+#blocker {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.d-none {
+    display: none !important;
+}
+
+.popupContainerLeft {
+    width: 380px;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #2A3647;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.popupContainerRight {
+    width: 620px;
+    height: 450px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contactsJoinLogo {
+    height: 80px;
+    width: 60px;
+    margin-bottom: 30px;
+    margin-top: 60px;
+}
+
+.editConLeftText {
+    font-size: 53px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.popupSubtitle {
+    font-size: 25px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.blueLine {
+    width: 90px;
+    height: 3px;
+    margin-top: 10px;
+    background-color: #29ABE2;
+}
+
+.editInputfield {
+    background-color: #FFFFFF;
+    border: none;
+
+    width: 280px;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.editConRightInputfields {
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.editContactInputfields {
+    display: flex;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 10%);
+    background-color: #FFFFFF;
+    padding-right: 12px;
+}
+
+.saveBtn {
+    background-color: #2A3647;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding: 11px;
+    width: 115px;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.closeIcon {
+    height: 31px;
+    width: 31px;
+    top: -25px;
+    padding-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.closeIcon:hover {
+    filter: invert(85%);
+}
+
+.btnCenter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.editIcons {
+    height: 20px;
+    width: 20px;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C1C1C1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9f9f9f;
+}
+
+
+.detailsBackBtn {
+    filter: invert(1) brightness(0.0);
+    opacity: 0.68;
+    cursor: pointer;
+    position: absolute;
+    top: 85px;
+    right: 10%;
+}
+
+.detailsBackBtn:hover {
+    opacity: 0.9;
+}
+
+.contactsSubHeadline {
+    font-size: 20px;
+}
+
+.mobileBlueLine {
+    display: none;
+}
+
+.overflowHidden {
+    overflow: hidden;
+}
+
+.mobileCloseIcon {
+    height: 31px;
+    width: 31px;
+    cursor: pointer;
+    display: none;
+    filter: invert(1);
+}
+
+.mobileCloseIcon:hover {
+    filter: invert(85%);
+}
+
+
+.mobileAddContact {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+@media screen and (max-width: 1500px) {
+    .contactsContainerBtn {
+        margin-right: unset;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .popup {
+        width: 950px;
+    }
+
+    .editConLeftText {
+        font-size: 50px;
+    }
+
+    .popupSubtitle {
+        font-size: 24px;
+    }
+    .contactsContainerLeft {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    #sidebar {
+        display: none !important;
+    }
+
+    #mobileBar {
+        display: flex !important;
+        width: 70% !important;
+        padding-right: 0px !important;
+        justify-content: space-between !important;
+        padding-left: 15% !important;
+        padding-right: 15% !important;
+        left: 0;
+    }
+
+    #header {
+        display: none !important;
+    }
+
+    #mobileHeader {
+        position: fixed;
+        height: 50px !important;
+        width: 80% !important;
+        justify-content: space-between;
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+        display: flex !important;
+        align-items: center !important;
+        background-color: #FFFFFF !important;
+        z-index: 1;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.26);
+        top: 0 !important;
+        left: 0;
+    }
+
+    .contacts {
+        padding-left: unset;
+    }
+
+    .joinLogoMobile {
+        width: 30px;
+        height: 32px;
+    }
+
+    .contactsContainerLeft {
+        margin-top: 50px;
+        margin-bottom: 35px;
+        height: unset;
+        padding-left: 30px;
+        padding-right: 30px;
+        min-width: 310px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #cover {
+        left: 0;
+        top: 50px;
+        bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .contactsContainerRight {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+}
+
+
+@media screen and (max-width: 1015px) {
+    .detailsName {
+        font-size: 42px;
+    }
+
+    .detailsInitial {
+        min-width: 110px;
+        min-height: 110px;
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .popup {
+        display: flex;
+        flex-direction: column;
+        height: unset;
+        align-items: center;
+    }
+
+    .popupContainerLeft {
+        height: 288px;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 20px;
+    }
+
+    .popupContainerRight {
+        height: 360px;
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 20px;
+        flex-direction: column;
+        width: 380px;
+        padding: 25px;
+        align-items: center;
+        justify-content: unset;
+    }
+
+
+    .contactsJoinLogo {
+        margin-bottom: 25px;
+        margin-top: 0px;
+    }
+
+    .closeIcon {
+        display: none;
+    }
+
+    .mobileCloseIcon {
+        display: unset;
+    }
+
+    .popupInitial {
+        position: relative;
+        top: -105px;
+        height: 150px;
+        width: 150px;
+        border: unset;
+    }
+
+    .editConRightInputfields {
+        display: flex;
+        flex-direction: column;
+        height: 276px;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: -66px;
+    }
+
+}
+
+@media screen and (max-width: 950px) {
+    .contactsContainerLeft {
+        width: 100%;
+    }
+
+    .contactsContainerRight {
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contactsContainerRight {
+        width: 87%;
+    }
+
+    .containerRightRow {
+        flex-direction: column;
+        align-items: unset;
+
+    }
+
+    .contactsHeadline {
+        border: unset;
+
+    }
+
+    .contactsSubHeadline {
+        padding-bottom: 22px;
+    }
+
+    h1 {
+        margin-bottom: 22px;
+    }
+
+    .mobileBlueLine {
+        display: block;
+        padding-bottom: 2px;
+        width: 70px;
+        background-color: #29ABE2;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .detailsName {
+        font-size: 38px;
+        margin-left: 32px;
+    }
+
+    .pencilImg {
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    .addContactBtn {
+        width: 118px;
+    }
+
+    .detailsSecondRow {
+        width: unset;
+    }
+
+    .containerRightRow {
+        width: unset;
+    }
+
+    .contactsContainerRight {
+        width: 88%;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    #contactDetails {
+        margin-top: 50px;
+    }
+
+    .detailsFourthRow {
+        margin-bottom: 50px;
+    }
+
+    .detailsBackBtn {
+        right: 6%;
+    }
+
+    .popupHeadline {
+        font-size: 50px;
+    }
+
+    #popupClearBtn {
+        width: 80px;
+    }
+
+    #popupCreateTaskBtn {
+        width: 160px;
+    }
+
+    .popupContainerLeft {
+        width: 336px;
+    }
+
+    .popupContainerRight {
+        width: 336px;
+    }
+
+}
+
+
+@media screen and (max-width: 430px) {
+    .contactsContainerLeft {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .contactName {
+        font-size: 19px;
+    }
+
+    .contactsHeadline {
+        font-size: 40px;
+    }
+
+    .contactsSubHeadline {
+        font-size: 18px;
+    }
+
+    .detailsName {
+        font-size: 33px;
+        margin-left: 17px;
+    }
+
+    .detailsInitial {
+        min-width: 90px;
+        min-height: 90px;
+        height: 90px;
+        width: 90px;
+        font-size: 36px;
+    }
+
+    .addContactBtn {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .popupHeadline {
+        margin-right: unset;
+        margin-left: unset;
+        justify-content: space-around;
+    }
+
+    .popupContainerRight {
+
+        width: 276px;
+    }
+
+    .popupSubtitle {
+        font-size: 20px;
+    }
+
+    .contactsJoinLogo {
+        height: 70px;
+        width: 58px;
+    }
+
+    .popupContainerLeft {
+        height: 255px;
+        width: 276px;
+    }
+
+    .editConLeftText {
+        font-size: 41px;
+    }
+
+    .editInputfield {
+        width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .popupHeadline {
+        font-size: 37px;
+    }
+
+    .contactsJoinLogo {
+        height: 60px;
+    }
+
+    .editConLeftText {
+        font-size: 36px;
+    }
+
+    .popupSubtitle {
+        font-size: 18px;
+    }
+
+    .detailsInitial {
+        height: 125px;
+        width: 125px;
+    }
+
+    .popupContainerLeft {
+        height: 203px;
+        width: 229px;
+    }
+
+    .popupContainerRight {
+        height: 308px;
+        width: 229px;
+    }
+
+    .editInputfield {
+        width: 183px;
+    }
+
+    .editConLeftText {
+        font-size: 34px;
+    }
+
+    .popupSubtitle {
+        font-size: 17px;
+    }
+
+    .blueLine {
+        height: 2px;
+    }
+
+    .contactsJoinLogo {
+        height: 54px;
+        margin-bottom: 21px;
+    }
+
+    .popupInitial {
+        height: 100px;
+        width: 100px;
+        top: -88px;
+    }
+    .contactsRow {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    #contactsRow {
+        padding-left: 15px;
+      
+    }
+
+    .initial {
+        margin-right: 16px;
+    }
+
+    .contactsContainerLeft {
+        min-width: unset;
+    }
+
+    .circleBg {
+        height: 29px;
+        width: 29px;
+    }
+
+    .detailsBackBtn {
+        height: 25px;
+    }
+
+    .detailsName {
+        font-size: 31px;
+        margin-left: 14px;
+    }
+
+    .detailsInitial {
+        min-width: 85px;
+        min-height: 85px;
+        height: 85px;
+        width: 85px;
+        font-size: 33px;
+    }
+}
+
